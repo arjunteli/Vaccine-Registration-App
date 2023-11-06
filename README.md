@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# NodejsBackendAssignment
+>>>>>>> 8277764b27adb47c34d9f1097a0833b32c0edf9d
 Assignment: An app created for vaccine registration (similar to that of Arogyasetu Cowin part).
 
 User schema: name, phone, age, pincode, aadhar, password and token.
