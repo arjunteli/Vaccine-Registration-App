@@ -38,7 +38,9 @@ const User = module.exports = mongoose.model('User', userSchema);
 //function to find the user by given phone number
 module.exports.getUserByPhone = async function(phone) {
     const query = {phone}
+    console.log(query);
     const user = await User.findOne(query)
+    console.log(user);
     return user
 }
 

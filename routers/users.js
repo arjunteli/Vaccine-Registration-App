@@ -6,6 +6,10 @@ const User = require('../models/users')
 const Registration = require('../models/registration');
 const bcrypt = require('bcryptjs')
 
+
+router.get('/dummy' , (req, res) => {
+    res.json({success: true, msg: "Dummy"})});
+
 //To signup user
 router.post('/signup', async (req, res) => {
     try {
@@ -22,11 +26,13 @@ router.post('/signup', async (req, res) => {
             aadhar: req.body.aadhar,
             password: await bcrypt.hash(req.body.password, 8)
         })
+        console.log(newUser);
         await newUser.save()
         res.status(201).send({success: true, msg: "You are registered successfully."})
-    }catch (e) {
-        res.status(400).send(e)
     }
+     catch (e) {
+         res.status(400).send(e)
+     }
 })
 
 //to login user
