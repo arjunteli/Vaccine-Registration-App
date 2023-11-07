@@ -35,7 +35,8 @@ const registrationSchema = mongoose.Schema({
     },
 })
 
-//creatind model
+
+
 const Registration = module.exports = mongoose.model('Registration', registrationSchema)
 
 //function to return the availability of specific slot i.e slots=10

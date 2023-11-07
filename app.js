@@ -1,11 +1,13 @@
 const express = require("express")
 const path = require("path")
 const bodyParser = require("body-parser")
+
 const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv");
 const users = require('./routers/users');
 const admin = require('./routers/admin')
+
 const app = express()
 
 //port number
@@ -27,9 +29,11 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-//body parser middleware
+//body parser 
 app.use(bodyParser.json());
 
 //Index routes
 app.use('/', users)
 app.use('/', admin)
+
+
